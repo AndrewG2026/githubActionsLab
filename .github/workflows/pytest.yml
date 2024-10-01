@@ -4,9 +4,10 @@ on:
     branches:
       - main
 jobs:
-  Lint:
+  Pytest:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - run: pip install Flask
       - run: pip install pytest
       - run: python -m pytest tests/
