@@ -9,4 +9,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: pip install Flask
-      - run: python -m flask --app webapp/app.py run
+      - run: python -m pytest tests/
