@@ -1,0 +1,11 @@
+name: Pytest
+on:
+  push:
+    branches:
+      - main
+jobs:
+  Lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: python -m flask --app webapp/app.py run
